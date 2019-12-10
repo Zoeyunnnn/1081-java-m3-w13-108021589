@@ -26,8 +26,11 @@ public class M3Q12 {
         }
         String[] data = str.split(" ");
         for (int i=0;i<data.length;i++){
-            for (int j=1;j<data.length;j++){
-                if (data[i]==data[j])count-=1;
+            for (int j=i+1;j<data.length;j++){
+                if (data[j].equals(data[i])){
+                    count--;
+                    i++;
+                }
             }
         }
         System.out.println(count);
