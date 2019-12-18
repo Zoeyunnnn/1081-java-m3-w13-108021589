@@ -1,21 +1,22 @@
 import java.util.Scanner;
 
 public class M3Q4 {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {    /*main所在為主函式*/
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        int[][] data = new int[y][x];
+        int w1 = sc.nextInt();
+        int h1 = sc.nextInt();
 
-        int sum = 1,t=1;
-        for (int i=1;i<=y;i++){
-            t=1;
-            for (int j=0;j<x;j++){
-                sum = i;
-                sum *= t;
-                System.out.print(sum+"\t");
-                t++;
+        fun(w1,h1);
+    }
+
+    public static void fun(int w,int h){
+        int[][] data = new int[h][w];
+
+        for (int i=1;i<=h;i++){
+            for (int j=1;j<=w;j++) {
+                data[i-1][j-1]=i*j;
+                System.out.print(data[i-1][j-1]+"\t");
             }
             System.out.println();
         }

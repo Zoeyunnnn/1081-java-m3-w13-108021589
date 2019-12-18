@@ -11,10 +11,10 @@ public class M3Q12 {
 
         int[] Arrn1 = new int[n1];
         int[] Arrn2 = new int[n2];
-        for (int i=0;i<n1;i++)Arrn1[i] = sc.nextInt();
-        for (int i=0;i<n2;i++)Arrn2[i] = sc.nextInt();
+        for (int i=0;i<n1;i++) Arrn1[i] = sc.nextInt();
+        for (int i=0;i<n2;i++) Arrn2[i] = sc.nextInt();
 
-        int count=0;String str="";
+        String str = "";int count=0;
         for (int i=0;i<n1;i++){
             for (int j=0;j<n2;j++){
                 if (Arrn1[i]==Arrn2[j]){
@@ -24,10 +24,12 @@ public class M3Q12 {
                 }
             }
         }
-        String[] data = str.split(" ");
+        String[] a = str.split(" ");
+        int[] data = new int[a.length];
+        for (int i=0;i<a.length;i++) data[i] = Integer.parseInt(a[i]);
         for (int i=0;i<data.length;i++){
             for (int j=i+1;j<data.length;j++){
-                if (data[j].equals(data[i])){
+                if (data[i]==data[j]){
                     count--;
                     i++;
                 }

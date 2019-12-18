@@ -9,6 +9,7 @@ public class M3Q9 {
 
         int[] data = new int[Str.length];
         for (int t=0;t<Str.length;t++)data[t] = Integer.parseInt(Str[t]);
+
         for (int i=0;i<Str.length;i++){
             for (int j=i+1;j<Str.length;j++){
                 if (data[i] > data[j]){
