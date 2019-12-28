@@ -6,15 +6,12 @@ public class M3Q6 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        String a = sc.nextLine();
+        char[] data = sc.next().toCharArray();
 
-        fun(a);
+        fun(data);
     }
-    public static void fun(String x){
-        char[] data = new char[x.length()];
-        for (int i=0;i<x.length();i++) {
-            data[i] = x.charAt(i);
-        }for (int i=0;i<data.length;i++) System.out.print(data[i]+"\t");
+    public static void fun(char[] x){
+        for (int i=0;i<x.length;i++) System.out.print(x[i]+"\t");
         System.out.println();
     }
 }

@@ -19,16 +19,15 @@ public class M3Q15 {
 
         int[][] data = new int[n1][m2];
 
-        for (int i=1;i<=n1;i++){
+        for (int i=0;i<n1;i++){
             for (int j=0;j<m2;j++){
-                int t=1;
-                int sum=0;
+                int t=1,sum=0;
                 while (t<=m1){
-                    sum += a[i-1][t-1]*b[t-1][j];
+                    sum += a[i][t-1]*b[t-1][j];
                     t++;
                 }
-                data[i-1][j] = sum;
-                System.out.print(sum+"\t");
+                data[i][j] = sum;
+                System.out.print(data[i][j]+"\t");
             }
             System.out.println();
         }

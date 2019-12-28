@@ -14,27 +14,48 @@ public class M3Q12 {
         for (int i=0;i<n1;i++) Arrn1[i] = sc.nextInt();
         for (int i=0;i<n2;i++) Arrn2[i] = sc.nextInt();
 
-        String str = "";int count=0;
+        int j=0,k=0,count=0;
+        boolean flag = true;
+
         for (int i=0;i<n1;i++){
-            for (int j=0;j<n2;j++){
-                if (Arrn1[i]==Arrn2[j]){
-                    count++;
-                    str += Arrn1[i]+" ";
-                    break;
-                }
+            j=0;k=0;
+            flag = true;
+            while (k<i){
+                if (Arrn1[i]==Arrn1[k])flag = false;
+                k++;
             }
-        }
-        String[] a = str.split(" ");
-        int[] data = new int[a.length];
-        for (int i=0;i<a.length;i++) data[i] = Integer.parseInt(a[i]);
-        for (int i=0;i<data.length;i++){
-            for (int j=i+1;j<data.length;j++){
-                if (data[i]==data[j]){
-                    count--;
-                    i++;
+            if (flag){
+                while (j<n2){
+                    if (Arrn1[i]==Arrn2[j]){
+                        count++;
+                        break;
+                    }j++;
                 }
             }
         }
         System.out.println(count);
+
+//        String str = "";int count=0;
+//        for (int i=0;i<n1;i++){
+//            for (int j=0;j<n2;j++){
+//                if (Arrn1[i]==Arrn2[j]){
+//                    count++;
+//                    str += Arrn1[i]+" ";
+//                    break;
+//                }
+//            }
+//        }
+//        String[] a = str.split(" ");
+//        int[] data = new int[a.length];
+//        for (int i=0;i<a.length;i++) data[i] = Integer.parseInt(a[i]);
+//        for (int i=0;i<data.length;i++){
+//            for (int j=i+1;j<data.length;j++){
+//                if (data[i]==data[j]){
+//                    count--;
+//                    i++;
+//                }
+//            }
+//        }
+//        System.out.println(count);
     }
 }
